@@ -1,0 +1,51 @@
+{
+  "name": "solo",
+  "version": "1.0.0",
+  "description": "soloproject",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_ENV=production node server/server.js",
+    "dev": "cross-env NODE_ENV=development nodemon server/server.js",
+    "lint": "eslint \"src/**/*.{js,jsx}\" --quiet" 
+  },
+  "author": "\"Erika Collins \\ <erikasusancollins@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.0",
+    "connect-mongo": "^4.6.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.3",
+    "cuid": "^2.1.8",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-session": "^1.17.3",
+    "mongoose": "^6.3.8",
+    "node-fetch": "^3.2.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0",
+    "webpack": "^5.73.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/preset-react": "^7.17.12",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "eslint": "^8.17.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.30.0",
+    "html-webpack-plugin": "^5.5.0",
+    "nodemon": "^2.0.16",
+    "sass": "^1.52.3",
+    "sass-loader": "^13.0.0",
+    "style-loader": "^3.3.1",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.2"
+  }
+}
