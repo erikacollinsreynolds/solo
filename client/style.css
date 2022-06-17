@@ -134,7 +134,8 @@
 }
 
 .loginId {
-  font-size: 3rem;
+  font-size: 2.5rem;
+  font-family: 'Fascinate', cursive;
   color: #EAF9E7;
   text-align: center;
 }
@@ -158,6 +159,10 @@
   padding: .5rem;
   border-radius: 10px;
 }
+
+/* ::placeholder {
+  color: #915F6D;
+} */
 
 #submit1 {
   margin: 10px;
