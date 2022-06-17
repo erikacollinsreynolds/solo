@@ -1,15 +1,22 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Unit-10-Authentication</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./client/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
+  <title>Student Observer</title>
 </head>
-<body>
-  Login
-  <form method="POST" action='/login'>
-    <input name="username" type="text" placeholder="username"></input>
-    <input name="password" type="password" placeholder="password"></input>
-    <input type='submit' value="login">
-  </form>
-  <a href='./signup'>Sign up</a>
+<body class='login'>
+  <div class='loginContainer'>
+    <h1 id='mainTitle' >THE STUDENT OBSERVER</h1>
+    <form class='loginForm' method="POST" action='/login'>
+      <input class='input1' name="username" type="text" placeholder="username"></input>
+      <input class='input1' name="password" type="password" placeholder="password"></input>
+      <br><input id='submit1' type='submit' value="login">
+    </form>
+  </div>
+  <a class='button1' href='./signup'>Sign up</a>
 </body>
 </html>

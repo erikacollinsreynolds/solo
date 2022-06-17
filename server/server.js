@@ -13,8 +13,8 @@ const PORT = 3000;
 
 const app = express();
 
-// WHAT IS HAPPENING HERE? //
-const mongoURI = process.env.NODE_ENV === 'test' ? 'mongodb://localhost/unit11test' : 'mongodb://localhost/unit11dev';
+// Connecting to DB //
+const mongoURI = 'mongodb+srv://erikacollins:Where1_505825@cluster0.mhnifug.mongodb.net/?retryWrites=true&w=majority';
 mongoose.connect(mongoURI);
 
 /**
@@ -51,24 +51,21 @@ app.get('/signup', (req, res) => {
 
 app.post('/signup', userController.createUser , (req, res) => {
   // what should happen here on successful sign up?
-  res.status(200).sendFile(path.resolve(__dirname, '../client/secret.html'));
+  res.status(200).sendFile(path.resolve(__dirname, '../client/home.html'));
 });
-
 
 /*** login ***/
 //  cookieController.setSSIDCookie
 app.post('/login', userController.verifyUser, (req, res) => {
-  // what should happen here on successful log in?
-
+  res.status(200).sendFile(path.resolve(__dirname, '../client/home.html'));
 });
-
 
 /*** Authorized routes ***/
-app.get('/secret', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '../client/secret.html'));
+app.get('/home', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../client/home.html'));
 });
 
-app.get('/secret/users', userController.getAllUsers, (req, res) => {
+app.get('/home/users', userController.getAllUsers, (req, res) => {
   res.send( { users: res.locals.users });
 })
 

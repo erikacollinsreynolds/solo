@@ -33,7 +33,6 @@ userController.createUser = (req, res, next) => {
     return res.status(500).send('Error in userController.createUser: Incorrect data received.');
   }
 
-
   newUser.save();
   return next();
 };
@@ -44,7 +43,11 @@ userController.createUser = (req, res, next) => {
 * against the password stored in the database.
 */
 userController.verifyUser = (req, res, next) => {
-  // write code here
+  console.log(req.body);
+  // const {_id} = req.body;
+  const {username} = req.body;
+  const {password} = req.body;
+  console.log('user.find --> ', User.findOne({username}));
 
 };
 
