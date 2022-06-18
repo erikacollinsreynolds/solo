@@ -24,6 +24,7 @@
 
 .mainh1 {
   font-size: 3rem;
+  font-family: 'Fascinate', cursive;
   color: #EAF9E7;
   position: absolute;
   left: 50%;
@@ -214,6 +215,17 @@
   font-family: 'Fascinate', cursive;
   color: #EAF9E7;
   text-align: center;
+}
+
+#addStudentBtn {
+  position: absolute;
+  display: flex;
+  align-items: right;
+  justify-content: right;
+  left: 80%;
+  top: 85%;
+  width: 5rem;
+  padding: .2rem;
 }
 
 @media (max-width: 800px) {

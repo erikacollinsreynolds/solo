@@ -1,6 +1,6 @@
 const secrets = document.querySelector('#secrets');
 
-fetch('/secret/users')
+fetch('/home') //what is this for... adding usernames and login to database?
   .then((res) => res.json())
   .then((data) => {
     const users = data.users;

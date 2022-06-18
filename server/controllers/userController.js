@@ -22,8 +22,6 @@ userController.getAllUsers = (req, res, next) => {
 * createUser - create and save a new User into the database.
 */
 userController.createUser = (req, res, next) => {
-  // write code here
-
   const newUser = new User ({
     username: req.body.username,
     password: req.body.password
@@ -42,13 +40,15 @@ userController.createUser = (req, res, next) => {
 * the appropriate user in the database, and then authenticate the submitted password
 * against the password stored in the database.
 */
-userController.verifyUser = (req, res, next) => {
-  console.log(req.body);
-  // const {_id} = req.body;
-  const {username} = req.body;
-  const {password} = req.body;
-  console.log('user.find --> ', User.findOne({username}));
-
+userController.verifyUser = async (req, res, next) => {
+  const {username, password} = req.body;
+  const user = await User.findOne({username: username})
+  console.log('USER QUERY PASSWORD --> ', user.password, user.username, password, username);
+    if (user.username === username && user.password === password){
+      return next()
+    } else if (user.password !== password || user.username !== username){
+      return res.status(500).send('Incorrect username or password. Please try again.')
+    }
 };
 
 module.exports = userController;

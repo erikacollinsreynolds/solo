@@ -2,6 +2,7 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 require('dotenv').config();
 
 // ADD YOUR CONTROLLERS HERE // 
@@ -22,10 +23,13 @@ mongoose.connect(mongoURI);
 * in req.body
 */
 app.use(express.json());
-app.use(express.urlencoded());
-// app.use(cookieParser());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(cookieParser());
 
-app.use('/client', express.static(path.resolve(__dirname, '../client')));
+app.use('/client', express.static(path.resolve(__dirname, '../client'))); //why does this go to /client?
 
 
 /**
@@ -50,7 +54,6 @@ app.get('/signup', (req, res) => {
 });
 
 app.post('/signup', userController.createUser , (req, res) => {
-  // what should happen here on successful sign up?
   res.status(200).sendFile(path.resolve(__dirname, '../client/home.html'));
 });
 
@@ -60,14 +63,15 @@ app.post('/login', userController.verifyUser, (req, res) => {
   res.status(200).sendFile(path.resolve(__dirname, '../client/home.html'));
 });
 
-/*** Authorized routes ***/
+/*** Authorized routes ***/  //shouldn't this check if they've logged in first?
 app.get('/home', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/home.html'));
 });
 
-app.get('/home/users', userController.getAllUsers, (req, res) => {
-  res.send( { users: res.locals.users });
-})
+//Do I need this?
+// app.get('/home/users', userController.getAllUsers, (req, res) => {
+//   res.send( { users: res.locals.users });
+// })
 
 /*** 404 handler ***/
 app.use('*', (req,res) => {
