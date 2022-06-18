@@ -13,16 +13,18 @@ TO DO:
 [x] npm install
 
 // PAGES //
-[] login
-[] signup
-[] homepage
+[x] login
+[x] signup
+[x] homepage
 [] add note
 [] view notes
 
 // THINGS TO LOOK INTO //
-[] package.json -- what should main be? index.js?
-
+[x] package.json -- what should main be? index.js?
+[] HOW DO I GET THE ROUTE/URL TO CHANGE ONCE IVE SUCCESSFULLY LOGGED IN OR SIGNED UP??? It continues to says /signup or /login
 
 // SCHEDULE //
 Wednesday: basic development setup (webpack, eslinting, dependencies, etc)
 Thursday: server setup (and database?) --> why can't I login after creating a user?, how can I clear the database?
+Friday: fix login and split screen issues
+Saturday: set up routes to add note, view notes, begin front end design of those pages, watch React refresher

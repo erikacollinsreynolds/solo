@@ -68,6 +68,25 @@ app.get('/home', (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/home.html'));
 });
 
+/*** ADD NOTE ***/
+//get
+// app.get('/add', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, '../client/addnote.html'));
+// })
+
+//post
+// app.post('/add', userController.addNote, (req, res) => {
+//   //what happens on a successful add note?
+// })
+
+/*** VIEW NOTE ***/
+//get
+// app.get('/view', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, '../client/viewnotes.html'));
+// })
+
+//post?
+
 //Do I need this?
 // app.get('/home/users', userController.getAllUsers, (req, res) => {
 //   res.send( { users: res.locals.users });
