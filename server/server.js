@@ -15,8 +15,7 @@ const PORT = 3000;
 const app = express();
 
 // Connecting to DB //
-const mongoURI = 'mongodb+srv://erikacollins:Where1_505825@cluster0.mhnifug.mongodb.net/?retryWrites=true&w=majority';
-mongoose.connect(mongoURI);
+mongoose.connect(process.env.MONGO_URI);
 
 /**
 * Automatically parse urlencoded body content and form data from incoming requests and place it

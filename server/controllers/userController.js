@@ -43,7 +43,7 @@ userController.createUser = (req, res, next) => {
 userController.verifyUser = async (req, res, next) => {
   const {username, password} = req.body;
   const user = await User.findOne({username: username})
-  console.log('USER QUERY PASSWORD --> ', user.password, user.username, password, username);
+  // console.log('USER QUERY PASSWORD --> ', user.password, user.username, password, username);
     if (user.username === username && user.password === password){
       return next()
     } else if (user.password !== password || user.username !== username){
