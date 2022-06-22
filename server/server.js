@@ -82,17 +82,16 @@ app.post('/add', noteController.createNote, (req, res) => {
 })
 
 /*** VIEW NOTE ***/
-//get
-app.get('/view', (req, res) => {
+//get ??OR CAN I ADD ANOTHER MIDDLEWARE TO THIS TO RENDER THE NOTES?!
+app.get('/view', noteController.getNotes, (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/viewnotes.html'));
 })
 
-//post?
+//post? when a user specifies a student or subject it can display all the notes associated
+app.post('/view', noteController.displayNotes, (req, res) => {
+  //what should happen when a student/subject is specified?
+})
 
-//Do I need this?
-// app.get('/home/users', userController.getAllUsers, (req, res) => {
-//   res.send( { users: res.locals.users });
-// })
 
 /*** 404 handler ***/
 app.use('*', (req,res) => {

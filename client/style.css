@@ -343,6 +343,42 @@
   justify-content: center;
 }
 
+table.sortable thead {
+  background-color:#F2D2BD;
+  border: black solid 0.2rem;
+  color:#915F6D;
+  font-weight: bold;
+  cursor: default;
+}
+
+#addNoteFromView {
+  font-size: 1.75rem;
+  font-family: 'Fascinate', cursive;
+  background-color: #915F6D;
+  color: #F2D2BD;
+  border: #F2D2BD solid 0.2rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 10rem;
+  padding: .5rem;
+  border-radius: 10px;
+  top: 80%;
+}
+
+#addNoteFromView:hover {
+  background-color: #F2D2BD;
+  border: #EAF9E7 solid 0.2rem;
+  color: #EAF9E7;
+}
+
+#tableContainer {
+  display: flex;
+  margin-top: 75px;
+  justify-content: center;
+  align-items: center;
+}
 
 
 @media (max-width: 800px) {
