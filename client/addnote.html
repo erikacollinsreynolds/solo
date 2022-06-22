@@ -15,15 +15,17 @@ Items Needed:
   <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
   <title>Student Observer</title>
 </head>
-<body>
+<body id="addNoteBody">
   <div>
-    <h1>THE STUDENT OBSERVER</h1>
-    <form class='loginForm' method="POST" action='/add'> 
-      <input class='input1' name="username" type="text" placeholder="username"></input>
-      <input class='input1' name="password" type="password" placeholder="password"></input>
-      <br><input id='submit1' type='submit' value="login">
+    <h1 class="addh1">THE STUDENT OBSERVER</h1>
+    <h4 class="addh4">Add a Note</h4>
+    <form class='addNote' method="POST" action='/add'> 
+      <input class='addinput1' name="student" type="text" placeholder="Student Name"></input>
+      <input class='addinput1' name="password" type="text" placeholder="Subject"></input>
+      <input id='noteTextBox' class='addinput1' name="password" type="text" placeholder="Note"></input>
+      <input id='submit1' type='submit' value="Submit">
     </form>
   </div>
-  <a>Submit</a>
+  <!-- <a>Submit</a> --> 
 </body>
 </html>

@@ -51,12 +51,12 @@ userController.verifyUser = async (req, res, next) => {
     }
 };
 
-userController.addNote = (req, res, next) => {
+// userController.addNote = (req, res, next) => {
 
-}
+// }
 
-userController.viewNotes = (req, res, next) => {
+// userController.viewNotes = (req, res, next) => {
   
-}
+// }
 
 module.exports = userController;

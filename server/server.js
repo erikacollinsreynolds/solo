@@ -15,7 +15,8 @@ const PORT = 3000;
 const app = express();
 
 // Connecting to DB //
-mongoose.connect(process.env.MONGO_URI);
+const URI = "mongodb+srv://erikacollins:Where1_505825@cluster0.mhnifug.mongodb.net/?retryWrites=true&w=majority"
+mongoose.connect(URI);
 
 /**
 * Automatically parse urlencoded body content and form data from incoming requests and place it
@@ -68,10 +69,10 @@ app.get('/home', (req, res) => {
 });
 
 /*** ADD NOTE ***/
-//get
-// app.get('/add', (req, res) => {
-//   res.sendFile(path.resolve(__dirname, '../client/addnote.html'));
-// })
+//get or view notes
+app.get('/add', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../client/addnote.html'));
+})
 
 //post
 // app.post('/add', userController.addNote, (req, res) => {
