@@ -20,9 +20,17 @@ Items Needed:
     <h1 class="addh1">THE STUDENT OBSERVER</h1>
     <h4 class="addh4">Add a Note</h4>
     <form class='addNote' method="POST" action='/add'> 
-      <input class='addinput1' name="student" type="text" placeholder="Student Name"></input>
-      <input class='addinput1' name="password" type="text" placeholder="Subject"></input>
-      <input id='noteTextBox' class='addinput1' name="password" type="text" placeholder="Note"></input>
+      <input class='addinput1' name="studentName" type="text" placeholder="Student Name"></input>
+      <select name="subject" id="subjects">
+        <option value="math">Math</option>
+        <option value="reading">Reading</option>
+        <option value="writing">Writing</option>
+        <option value="social-emotional">Social-Emotional</option>
+        <option value="attendance">Attendance</option>
+        <option value="other">Other</option>
+      </select>
+      <!-- <input class='addinput1' name="password" type="text" placeholder="Subject"></input> -->
+      <textarea id='noteTextBox' class='addinput1' name="note" type="text" placeholder="Note" rows="5" cols="50"></textarea>
       <input id='submit1' type='submit' value="Submit">
     </form>
   </div>

@@ -9,6 +9,7 @@ require('dotenv').config();
 const userController = require('./controllers/userController');
 const cookieController = require('./controllers/cookieController');
 const sessionController = require('./controllers/sessionController');
+const noteController = require('./controllers/noteController')
 
 const PORT = 3000;
 
@@ -75,15 +76,16 @@ app.get('/add', (req, res) => {
 })
 
 //post
-// app.post('/add', userController.addNote, (req, res) => {
-//   //what happens on a successful add note?
-// })
+app.post('/add', noteController.createNote, (req, res) => {
+  //what happens on a successful add note?
+  res.sendFile(path.resolve(__dirname, '../client/home.html'));
+})
 
 /*** VIEW NOTE ***/
 //get
-// app.get('/view', (req, res) => {
-//   res.sendFile(path.resolve(__dirname, '../client/viewnotes.html'));
-// })
+app.get('/view', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../client/viewnotes.html'));
+})
 
 //post?
 
