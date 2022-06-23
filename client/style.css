@@ -380,7 +380,27 @@ table.sortable thead {
   align-items: center;
 }
 
+#addclass {
+  font-size: 1rem;
+  font-family: 'Fascinate', cursive;
+  color: #EAF9E7;
+  border: #EAF9E7 solid 0.2rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  width: 10rem;
+  padding: .5rem;
+  border-radius: 10px;
+  width: 200px;
+  margin-top: 325px;
+  
+}
 
+.rightContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+}
 @media (max-width: 800px) {
   h1 {
     font-size: 2rem;
