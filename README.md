@@ -35,6 +35,6 @@ Saturday: set up routes to add note, view notes, begin front end design of those
 [x] create index.js
 [x] inject js into script tag for viewnotes.html
 [] within js file --> hit an end point that will query the db to return all note
-[] create button on view page that will trigger onclick event --> render the query
+[x] create button on view page that will trigger onclick event --> render the query
 [] once you get returned data, iterate through notes, append each node to the DOM (e.g. an id that is in the viewnotes.html)
 [] add styling when you're done

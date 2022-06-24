@@ -9,7 +9,7 @@ require('dotenv').config();
 const userController = require('./controllers/userController');
 const cookieController = require('./controllers/cookieController');
 const sessionController = require('./controllers/sessionController');
-const noteController = require('./controllers/noteController')
+const noteController = require('./controllers/noteController');
 
 const PORT = 3000;
 
@@ -32,7 +32,6 @@ app.use(cookieParser());
 
 app.use('/client', express.static(path.resolve(__dirname, '../client'))); //why does this go to /client?
 
-
 /**
 * --- Express Routes ---
 * Express will attempt to match these routes in the order they are declared here.
@@ -47,7 +46,6 @@ app.get('/',
   (req, res) => {
     res.sendFile(path.resolve(__dirname, '../client/index.html'));
   });
-
 
 /*** signup ***/
 app.get('/signup', (req, res) => {
@@ -85,11 +83,6 @@ app.post('/add', noteController.createNote, (req, res) => {
 //get ??OR CAN I ADD ANOTHER MIDDLEWARE TO THIS TO RENDER THE NOTES?!
 app.get('/view', noteController.getNotes, (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/viewnotes.html'));
-})
-
-//post? when a user specifies a student or subject it can display all the notes associated
-app.post('/view', noteController.displayNotes, (req, res) => {
-  //what should happen when a student/subject is specified?
 })
 
 

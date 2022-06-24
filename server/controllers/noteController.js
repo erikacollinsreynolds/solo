@@ -10,6 +10,7 @@ noteController.getNotes = (req, res, next) => {
         return next();
     })
 }
+
 noteController.displayNotes = (req, res, next) => {
     
 }
@@ -25,9 +26,7 @@ noteController.createNote = (req, res, next) => {
         return next();
 }
 
+//Can I add a controller to query my db and then use those results in index.js?
 
-noteController.deleteNote = (req, res, next) => {
-
-}
 
 module.exports = noteController;
