@@ -1,40 +1,22 @@
-<!-- 
-Items Needed:
-1. Student Names (drop down bar)
-2. Subject (drop down bar)
-3. Note (text box)
-4. Submit Button --- signals a successful submission
- -->
  <html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="./client/style.css" />
-  <!-- <script src="sorttable.js"></script> -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fascinate&display=swap" rel="stylesheet">
   <title>Student Observer</title>
 </head>
 <body id="addNoteBody">
-  <div>
-    <h1 class="addh1">THE STUDENT OBSERVER</h1>
-    <br><br><br>
-    <div id="tableContainer">
-        <table class="sortable">
-            <thead>
-                <tr>
-                    <th>Student Name</th>
-                    <th>Subject</th>
-                </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-        </table>
-    </div>
-    <a href="add" id='addNoteFromView' class="btn">Add Note</a>
+  <h1 class="addh1">THE STUDENT OBSERVER</h1>
+  <br><br><br><br><br><br>
+  <div id="viewNotesDiv">
+    <button onclick="viewNotes()" id="viewNotesFromView">VIEW ALL NOTES</button>
   </div>
-  <!-- <a>Submit</a> --> 
+  <a href="add" id='addNoteFromView' class="btn">Add Note</a>
+  <br><br>
+  <div id="banana"></div> 
 </body>
+<script src="./client/index.js"></script>
 </html>

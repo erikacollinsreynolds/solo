@@ -7,7 +7,7 @@ module.exports = {
 
     //entry: tells webpack where our top most level of our front end is so that can start compiling
     entry: {
-        src: '.client/index.js'
+        src: './client/index.html'
     },
 
     //output: tells webpack where to output our compiled file
@@ -42,7 +42,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Development',
-            template: 'index.html'
+            template: './client/index.html'
         }),
     ],
 
