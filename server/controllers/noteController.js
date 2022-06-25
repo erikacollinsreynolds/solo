@@ -11,8 +11,13 @@ noteController.getNotes = (req, res, next) => {
     })
 }
 
-noteController.displayNotes = (req, res, next) => {
-    
+noteController.viewnotes = (req, res, next) => {
+
+    Note.find({}, (err, notes) => {
+        if (err) return next((err));
+        res.locals.notes = notes;
+        return next();
+    })
 }
 
 noteController.createNote = (req, res, next) => {

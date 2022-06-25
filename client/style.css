@@ -364,7 +364,6 @@ table.sortable thead {
   width: 10rem;
   padding: .5rem;
   border-radius: 10px;
-  top: 80%;
 }
 
 #addNoteFromView:hover {
@@ -435,6 +434,21 @@ table.sortable thead {
   flex-direction: column;
   align-content: flex-end;
 }
+
+ul {
+  list-style-type: none;
+  color: black;
+  border: #EAF9E7 solid 0.2rem;
+  border-radius: 10px;
+}
+
+li {
+  margin-top: 3px;
+  margin-bottom: 3px;
+  font-size: 1rem;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
 @media (max-width: 800px) {
   h1 {
     font-size: 2rem;

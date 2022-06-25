@@ -80,11 +80,15 @@ app.post('/add', noteController.createNote, (req, res) => {
 })
 
 /*** VIEW NOTE ***/
-//get ??OR CAN I ADD ANOTHER MIDDLEWARE TO THIS TO RENDER THE NOTES?!
+//get
 app.get('/view', noteController.getNotes, (req, res) => {
   res.sendFile(path.resolve(__dirname, '../client/viewnotes.html'));
 })
 
+app.get('/viewnotes', noteController.viewnotes, (req, res) => {
+  // res.sendFile(path.resolve(__dirname, '../client/viewnotes.html'));
+  res.status(200).send(res.locals.notes);
+})
 
 /*** 404 handler ***/
 app.use('*', (req,res) => {
